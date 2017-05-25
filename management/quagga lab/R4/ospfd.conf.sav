@@ -1,0 +1,36 @@
+!
+! Zebra configuration saved from vty
+!   2015/05/13 17:38:20
+!
+hostname ospfd
+password zebra
+log stdout
+!
+!
+!
+interface eth0
+ description to R1
+!
+interface eth1
+ description to R5
+!
+interface eth2
+ description to R3
+!
+interface eth3
+!
+interface eth4
+!
+interface lo
+!
+router ospf
+ ospf router-id 192.168.4.2
+ redistribute connected
+ redistribute bgp
+ passive-interface eth0
+ network 192.168.4.0/24 area 0.0.0.0
+ network 192.168.7.0/24 area 0.0.0.0
+ network 192.168.8.0/24 area 0.0.0.0
+!
+line vty
+!

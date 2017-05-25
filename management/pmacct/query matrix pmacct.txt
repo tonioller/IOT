@@ -1,0 +1,2 @@
+select ip_src, ip_dst, count(*), sum(bytes), stamp_inserted, stamp_updated from pmacct.acct_v6 group by ip_src, ip_dst;
+

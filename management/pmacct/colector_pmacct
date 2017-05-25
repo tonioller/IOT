@@ -1,0 +1,14 @@
+aggregate: src_host, dst_host, src_as, dst_as, src_port, dst_port, proto, tos
+plugins: print[dummy], mysql
+plugin_buffer_size: 1024
+nfacctd_port: 3128
+nfacctd_ip: 192.168.5.2
+
+sql_optimize_clauses: true
+sql_table_version: 6
+sql_db: pmacct
+sql_passwd: telematica
+sql_user: root
+sql_history_roundoff: m
+sql_refresh_time: 300
+sql_history: 5m

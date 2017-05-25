@@ -1,0 +1,25 @@
+!
+! Zebra configuration saved from vty
+!   2015/05/13 17:09:01
+!
+hostname ospfd
+password zebra
+log stdout
+!
+!
+!
+interface eth0
+ description to R2
+!
+interface eth1
+ description to R5
+!
+interface eth2
+ description to R1
+!
+interface eth4
+!
+interface lo
+!
+line vty
+!

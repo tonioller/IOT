@@ -1,0 +1,20 @@
+!
+! Zebra configuration saved from vty
+!   2015/05/13 16:53:36
+!
+hostname bgpd
+password zebra
+log stdout
+!
+router bgp 500
+ bgp router-id 192.168.1.2
+ network 192.168.1.0/24
+ network 192.168.3.0/24
+ network 192.168.4.0/24
+ redistribute connected
+ neighbor 192.168.1.1 remote-as 2000
+ neighbor 192.168.3.2 remote-as 1000
+ neighbor 192.168.4.2 remote-as 1000
+!
+line vty
+!
